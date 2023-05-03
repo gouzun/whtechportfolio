@@ -1,11 +1,9 @@
 import Articles from "./Articles"
-import Footer from "./Footer"
 
 const MainScreen = () => {
-  return (<>    
+  return (<>
     <Articles />
-    <Footer />
-        </>
+  </>
   )
 }
 
