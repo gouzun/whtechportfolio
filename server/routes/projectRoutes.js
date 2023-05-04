@@ -9,7 +9,7 @@ dotenv.config();
 const router = express.Router();
 
 router.route('/').get(async (req, res) => {
-    console.log("herere");
+    // console.log("herere");
     try {
         const list = await ProjectList.find({});
         res.status(200).json({ success: true, data: list });
