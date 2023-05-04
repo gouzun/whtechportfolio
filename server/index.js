@@ -16,6 +16,7 @@ app.use('/api/v1/projectlist', projectRoutes);
 app.use('/api/v1/articlelist', articleRoutes);
 
 app.get('/', async (req, res) => {
+   
     res.status(200).json({
         message: 'Hello from portfolio server!',
     });

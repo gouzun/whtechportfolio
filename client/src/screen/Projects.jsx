@@ -27,20 +27,36 @@ const Projects = () => {
   const fetchPosts = async () => {
 
     try {
+      let responseClone;
       const response = await fetch('http://localhost:5173/api/v1/projectlist', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
+          
         },
-      });
+      }).then(function (response) {
+        responseClone = response.clone(); // 2
+        return response.json();
+      })
+        .then(function (data) {
+          // Do something with data
+        }, function (rejectionReason) { // 3
+          console.log('Error parsing JSON from response:', rejectionReason, responseClone); // 4
+          responseClone.text() // 5
+            .then(function (bodyText) {
+              console.log('Received the following instead of valid JSON:', bodyText); // 6
+            });
+        });
 
-      if (response.ok) {
-        const result = await response.json();
-        setResList(result.data.reverse());
-      }
+
+
+      //   if (response.ok) {
+      //     console.log("response ok o")
+      //     const result = await response.json();
+      //     setResList(result.data.reverse());
+      //   }
     } catch (err) {
       alert(err);
-    } finally {
     }
   };
 

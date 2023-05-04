@@ -22,7 +22,7 @@ const Biosection = () => {
           <Typography variant="h4" className="mb-2 text-[#cfd8dc] pt-5">
             Wayne Hoo Win Hong
             <br />
-            <span className="text-base">gouzun@gmail.com</span>
+            <span className="text-base"><a href="mailto:gouzun@gmail.com">gouzun@gmail.com</a></span>
           </Typography>
 
 
@@ -47,7 +47,7 @@ const Biosection = () => {
         <div className="pt-5">
           <Typography variant="h6" className="mb-2 text-[#cfd8dc] text-left">
             I would be delighted to assist you with any inquiries or explore potential business opportunities with you. Please do not hesitate to contact us, as we value the opportunity to establish mutually beneficial partnerships.
-            <br /><br />You can always reach me at gouzun@gmail.com.
+            <br /><br />You can always reach me at <a href="mailto:gouzun@gmail.com">gouzun@gmail.com</a>.
           </Typography>
         </div>
 
