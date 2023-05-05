@@ -8,6 +8,7 @@ import {
 } from "@material-tailwind/react";
 import me from '../assets/me.jpg';
 import { useState, useEffect } from 'react';
+import Loader from '../utils/Loader';
 
 const Projects = () => {
   // const [projectinfo, setProjectinfo] = useState({
@@ -19,7 +20,7 @@ const Projects = () => {
   // });
 
   const [resList, setResList] = useState([]);
-
+  const [isLoading, setIsLoading] = useState('');
   useEffect(() => {
     fetchPosts();
   }, [])
@@ -27,8 +28,9 @@ const Projects = () => {
   const fetchPosts = async () => {
 
     try {
+      setIsLoading(false);
       let responseClone;
-      const response = await fetch('http://localhost:5173/api/v1/projectlist', {
+      const response = await fetch('https://portfolio-8q1p.onrender.com/api/v1/projectlist', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -51,18 +53,19 @@ const Projects = () => {
 
 
       if (response.ok) {
-        console.log("response ok o")
         const result = await response.json();
         setResList(result.data.reverse());
       }
     } catch (err) {
       alert(err);
+    } finally {
+      setIsLoading(true);
     }
   };
 
   return (<>
     <div className="flex flex-wrap justify-center items-center  gap-20 pt-10">
-      {resList.map((projectinfo, index) => {
+      {isLoading ? resList.map((projectinfo, index) => {
         return (
           <Card className="w-96" key={index}>
             <CardHeader color="blue" className="relative h-72 ">
@@ -85,7 +88,7 @@ const Projects = () => {
               </Typography>
             </CardBody>
           </Card>)
-      })}
+      }) : <Loader />}
     </div>
 
   </>)

@@ -23,7 +23,7 @@ const Articles = () => {
 
     return (<>
         <div className="md:flex gap-8 text-[#cfd8dc] pt-10 justify-center items-center h-full md:h-96">
-            <div className="w-full md:w-1/2 flex items-center justify-center">
+            <div className="w-full md:w-1/2 flex items-center justify-center ">
                 {isSmScreen ? <Spline scene="https://prod.spline.design/r5AWLdvDUFhvNIXZ/scene.splinecode" />
 
                     : <Spline scene="https://prod.spline.design/nPz5tAMyImg5zVPK/scene.splinecode" />}</div>
