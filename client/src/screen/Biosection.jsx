@@ -25,7 +25,7 @@ const Biosection = () => {
 
           <br />
           <Typography variant="h6" textGradient className="text-[#cfd8dc]">
-            Full Stack Developer/AI Prompt Engineer
+            Full Stack Developer
           </Typography>
           <br />
           <Typography textGradient className="text-[#cfd8dc]">
