@@ -68,7 +68,7 @@ const Projects = () => {
       {isLoading ? resList.map((projectinfo, index) => {
         return (
           <Card className="w-96" key={index}>
-            <CardHeader color="blue" className="relative h-72 ">
+            <CardHeader color="blue" className="relative h-64 md:h-72 ">
               <img
                 src={projectinfo.pImg}
                 alt={projectinfo.pAlt}

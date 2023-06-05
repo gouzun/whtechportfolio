@@ -1,13 +1,10 @@
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  Typography, Avatar, Button, Divide
+
+  Typography, Avatar,
 
 } from "@material-tailwind/react";
 import me from '../assets/me.jpg';
-import emailjs from '@emailjs/browser';
-import { useState, useRef } from "react";
+
 
 
 const Biosection = () => {

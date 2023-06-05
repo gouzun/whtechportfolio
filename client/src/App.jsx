@@ -32,7 +32,7 @@ const App = () => {
       <div className="flex flex-col min-h-screen">
         <header className='w-full flex justify-between items-center bg-[#37474f] px-8 py-4 drop-shadow-lg'>
           <Link to="/">
-            <h1 className="font-extrabold text-[#cfd8dc] text-[24px] ">WHTECH <span className="md:text-[11px] text-[9px]">Empowering ideas through technology</span></h1>
+            <h1 className="font-extrabold text-[#cfd8dc] md:text-[24px] text-[16px] ">WHTECH <span className="md:text-[11px] text-[9px]">Empowering ideas through technology</span></h1>
           </Link>
           {isSmScreen ? (
             <Menu >
